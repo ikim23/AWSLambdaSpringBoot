@@ -1,0 +1,28 @@
+service: pet-store
+
+provider:
+  name: aws
+  stage: dev
+  region: eu-west-1
+  runtime: java8
+  memorySize: 3008
+  timeout: 300
+
+package:
+  artifact: target/serverless-spring-boot-example-1.0-SNAPSHOT.jar
+
+functions:
+  func:
+    handler: com.amazonaws.serverless.sample.springboot.StreamLambdaHandler::handleRequest
+    events:
+      - http:
+          path: /{proxy+}
+          method: any
+
+custom:
+  scripts:
+    hooks:
+      'deploy:createDeploymentArtifacts': mvnw package
+
+plugins:
+  - serverless-plugin-scripts
