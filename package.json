@@ -1,0 +1,9 @@
+{
+  "name": "serverless",
+  "version": "1.0.0",
+  "author": "ikim23",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-plugin-scripts": "^1.0.2"
+  }
+}
