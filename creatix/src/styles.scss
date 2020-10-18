@@ -1,0 +1,29 @@
+* {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+:root {
+    box-sizing: border-box;
+    font-size: calc(0.5vw + 0.5em);
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+@media (min-width: 50em) {
+    :root {
+        font-size: 1.125em;
+    }
+}
+
+html,
+body,
+#app {
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}

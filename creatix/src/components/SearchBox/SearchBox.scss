@@ -1,0 +1,21 @@
+.search-box {
+    position: relative;
+    &.search-box--show-clear {
+        .ms-TextField input {
+            padding-right: 2em;
+        }
+        .search-box__clear {
+            display: block;
+        }
+    }
+    .search-box__clear {
+        display: none;
+        position: absolute;
+        line-height: 32px;
+        font-size: 14px;
+        top: 0;
+        right: .5em;
+        color: red;
+        cursor: pointer;
+    }
+}
